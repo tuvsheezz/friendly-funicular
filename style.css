@@ -1,0 +1,54 @@
+.timeline-item {
+    position: relative;
+    padding-left: 60px; /* ラインとサークルの分の余白を設定 */
+    margin-bottom: 50px;
+}
+
+.timeline-item-line {
+    position: absolute;
+    top: 0;
+    left: 30px; /* サークルの左側にラインを配置 */
+    width: 2px;
+    height: 100%;
+    background-color: #ccc; /* ラインの色 */
+}
+
+.timeline-item-circle {
+    position: absolute;
+    top: 0;
+    left: 22px; /* サークルの中央に配置 */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #000; /* サークルの色 */
+}
+
+.timeline-item-content {
+    padding-left: 30px; /* サークルの分の余白を設定 */
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 0;
+    }
+    .timeline-item-line {
+        left: 50%;
+        transform: translateX(-50%); /* サークルの中央にラインを配置 */
+    }
+    .timeline-item-circle {
+        left: 50%;
+        transform: translateX(-50%); /* サークルの中央に配置 */
+    }
+    .timeline-item-content {
+        padding-left: 0;
+    }
+}
+
+/* ページトップの画像 */
+#top-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+}
